@@ -34,12 +34,30 @@ $(document).ready(function () {
     clientLogosContainer.append(logoHolder);
   }
 
-  $("nav .nav-links a").click(function () {
+  // Burger click event
+  $('.burger').click(function () {
+    // Toggle the 'v-class' id on the navbar
+    $('.nav-links').attr('id', function (_, attr) {
+      return attr === 'v-class' ? '' : 'v-class';
+    });
+
+    // Toggle the 'cross' class on the burger
+    $('.burger').toggleClass('cross');
+  });
+
+  // Nav links click event
+  $('nav .nav-links a').click(function () {
     // Remove the 'selected' class from all links
-    $("nav .nav-links a").removeClass("selected");
+    $('nav .nav-links a').removeClass('selected');
 
     // Add the 'selected' class to the clicked link
-    $(this).addClass("selected");
+    $(this).addClass('selected');
+
+    // Close the side menu by removing the 'v-class' id
+    $('.nav-links').removeAttr('id');
+
+    // Restore the burger icon to its original state
+    $('.burger').removeClass('cross');
   });
 
   // Cache the navigation links
@@ -99,3 +117,18 @@ for (let i = 1; i <= 4; i++) {
     },
   });
 }
+    $(document).ready(function () {
+        var navHeight = $('nav').outerHeight();
+      // Smooth scroll to target section with an offset
+      $('.nav-links a').on('click', function (event) {
+        event.preventDefault();
+        var targetId = $(this).attr('href');
+        var offset = $(targetId).offset().top - navHeight;
+
+        $('html, body').animate({
+          scrollTop: offset
+        }, 100);
+      });
+    });
+
+

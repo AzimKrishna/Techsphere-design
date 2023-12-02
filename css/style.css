@@ -27,10 +27,13 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
-button{
+
+button {
     border: none;
 }
+
 :root {
     --white: #fff;
     --white-light: #F8FAFB;
@@ -43,6 +46,7 @@ button{
 body {
     background-color: var(--black-primary);
 }
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -66,6 +70,7 @@ body {
     background-color: var(--black-secondary);
     border-radius: 6px;
 }
+
 .container {
     max-width: 90rem;
     margin-left: auto;
@@ -75,6 +80,10 @@ body {
 .wrapper {
     padding-left: 8.3rem;
     padding-right: 8.3rem;
+}
+
+.burger {
+    display: none;
 }
 
 nav {
@@ -142,7 +151,8 @@ nav .nav-links ul a {
     background-color: transparent;
     transition: background-color 0.3s ease;
 }
-nav .nav-links ul a:hover{
+
+nav .nav-links ul a:hover {
     background-color: var(--white);
 }
 
@@ -165,7 +175,7 @@ nav .nav-links ul a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 15;
+    z-index: 2;
 }
 
 .hero-section .text-holder h1 {
@@ -203,10 +213,11 @@ nav .nav-links ul a:hover{
     transition: 0.3s ease;
 }
 
-.hero-section .text-holder button:hover{
+.hero-section .text-holder button:hover {
     background: var(--white-light);
     color: var(--black-secondary);
 }
+
 .hero-section .graphics-holder1 {
     width: 31.625rem;
     height: 31.625rem;
@@ -231,7 +242,6 @@ nav .nav-links ul a:hover{
 
 
 .about {
-    height: 52.19rem;
     padding: 3.12rem 0;
 }
 
@@ -368,7 +378,8 @@ nav .nav-links ul a:hover{
 
 .projects .projects-holder .project-card {
     width: 100%;
-    height: 37.5rem;
+    /* height: 37.5rem; */
+    aspect-ratio: 73.125 / 37.5;
     background-color: #F4F2FF;
     overflow: hidden;
     position: relative;
@@ -518,7 +529,7 @@ nav .nav-links ul a:hover{
     padding-left: 1.62rem;
     margin-top: 3.3rem;
     position: relative;
-    z-index: 10;
+    z-index: 9;
 
 }
 
@@ -544,7 +555,7 @@ nav .nav-links ul a:hover{
 
 .banner-holder .img-holder {
     width: 43.0625rem;
-    height: 30.375rem;
+    aspect-ratio: 43.0625rem/30.375rem;
     position: absolute;
     bottom: 0;
     right: 9.87rem;
@@ -608,16 +619,22 @@ nav .nav-links ul a:hover{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    row-gap: 4.62rem;
-    column-gap: 4rem;
+    /* row-gap: 4.62rem; */
+    /* column-gap: 4rem; */
     flex-wrap: wrap;
 }
 
 .testimonials-holder .testimonials-cards-holder .cards {
     display: flex;
-    max-height: 21.3rem;
+    /* max-height: 21.3rem; */
+    /* height: 21.3rem; */
     column-gap: 1.81rem;
-    max-width: 34.5rem;
+    /* max-width: 34.5rem; */
+    flex: 1 0 calc(50% - 1.81rem);
+    /* Two cards in a row with some gap */
+    max-width: calc(50% - 1.81rem);
+    margin-bottom: 4.62rem;
+    /* Row gap */
 }
 
 .testimonials-holder .testimonials-cards-holder .cards .pfp-holder {
@@ -638,6 +655,10 @@ nav .nav-links ul a:hover{
     font-weight: 400;
     line-height: normal;
     padding: 0.30rem 0;
+}
+
+.testimonials-holder .testimonials-cards-holder .cards .text-holder {
+    /* overflow: hidden; */
 }
 
 .testimonials-holder .testimonials-cards-holder .cards .designation {
@@ -676,7 +697,8 @@ nav .nav-links ul a:hover{
     transition: 0.3s ease;
     cursor: pointer;
 }
-.testimonials-holder .btn-holder button:hover{
+
+.testimonials-holder .btn-holder button:hover {
     background-color: rgb(138, 125, 234);
     color: var(--white-light);
 }
@@ -733,6 +755,7 @@ nav .nav-links ul a:hover{
     column-gap: 5rem;
     padding-bottom: 2.62rem;
     padding-top: 2.62rem;
+    flex-wrap: wrap;
 
 }
 
@@ -762,7 +785,6 @@ nav .nav-links ul a:hover{
 }
 
 .contact {
-    height: 32.9375rem;
     background: url('../img/contact-bg.png');
 }
 
@@ -886,16 +908,19 @@ footer .nav-links ul li a {
     display: block;
     text-transform: uppercase;
 }
-footer .social-holder{
+
+footer .social-holder {
     display: flex;
     column-gap: 1.2rem;
     margin-bottom: 2.62rem;
 }
-footer hr{
+
+footer hr {
     background: #D1CFCF;
     height: 0.0625rem;
     width: 100%;
 }
+
 footer .social-holder .social-ico-holder {
     width: 2.5rem;
     height: 2.5rem;
@@ -911,7 +936,8 @@ footer .social-holder .social-ico-holder svg {
     width: 100%;
     object-fit: contain;
 }
-footer .credits p:nth-child(1){
+
+footer .credits p:nth-child(1) {
     color: var(--white);
     text-align: center;
     font-size: 0.9375rem;
@@ -921,12 +947,840 @@ footer .credits p:nth-child(1){
     letter-spacing: 0.00938rem;
     margin-top: 1.2rem;
 }
-footer .credits p:nth-child(2){
+
+footer .credits p:nth-child(2) {
     color: var(--white);
     text-align: center;
     font-size: 0.75rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.72144rem; 
+    line-height: 1.72144rem;
     letter-spacing: 0.0075rem;
+}
+
+
+
+
+
+/* Extra Small Devices (Phones) */
+@media only screen and (max-width: 575px) {
+
+    html {
+        font-size: 11px;
+    }
+
+    .container {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section hr {
+        margin-top: 0.5rem;
+    }
+
+    section h3 {
+        font-size: 1.5rem;
+    }
+
+    .wrapper {
+        padding-left: 1.3rem;
+        padding-right: 1.3rem;
+    }
+
+    .burger {
+        display: block;
+        position: fixed;
+        cursor: pointer;
+        right: 5%;
+        display: block;
+        z-index: 151;
+    }
+
+    .line {
+        width: 33px;
+        height: 4px;
+        background-color: var(--white);
+        margin: 3px 3px;
+        transition: transform 0.3s;
+    }
+
+    /* Additional styles to create the cross icon */
+    .burger.cross .line:nth-child(1) {
+        transform: rotate(-43deg) translate(-5px, 5px);
+        background-color: var(--black-primary);
+    }
+
+    .burger.cross .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.cross .line:nth-child(3) {
+        transform: rotate(43deg) translate(-5px, -5px);
+        background-color: var(--black-primary);
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 151;
+    }
+
+    nav {
+        height: 60px;
+        background-color: var(--black);
+    }
+
+    nav .nav-wrapper {
+        padding-top: 0rem;
+        height: 100%;
+        align-items: center;
+
+    }
+
+    .hero {
+        height: 58rem;
+    }
+
+    nav .nav-links {
+        width: 90vw;
+        height: 100vh;
+        border-radius: 2.5rem 0 0 2.5rem;
+        background: var(--white-light);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 150;
+        top: 0;
+        bottom: 0;
+        right: -100%;
+        transition: right 0.5s ease;
+    }
+
+    #v-class {
+        right: 0;
+    }
+
+    nav .nav-links .selected {
+        background-color: var(--white);
+    }
+
+    nav .nav-links ul {
+        margin-top: 30vh;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        row-gap: 3rem;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    nav .nav-links ul li {
+        width: 90%;
+    }
+
+    nav .nav-links ul a {
+        text-decoration: none;
+        color: var(--black);
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        padding: 1rem 1.5rem;
+        border-radius: 0rem;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+    }
+
+    .hero-section .text-holder h1{
+        text-align: center;
+        font-size: 6rem;
+
+    }
+    .hero-section .text-holder h2{
+        text-align: center;
+        font-size: 3rem;
+
+    }
+    .hero-section .text-holder{
+        padding-left: 1.3rem;
+        padding-right: 1.3rem;
+    }
+    .hero-section .graphics-holder1 {
+        width: 22.625rem;
+        height: 22.625rem;
+        left: -11rem;
+    }
+
+    .hero-section .graphics-holder2 {
+        width: 9.5625rem;
+        height: 9.5625rem;
+        top: 8.5rem;
+        z-index: 1;
+    }
+
+    .header-placeholder {
+        height: 60px;
+        /* Adjust this value based on your navbar height */
+    }
+    .about .about-quote .section-heading-description span,
+    .services .services-holder .section-heading-description span{
+        padding-left: 0px;
+    }
+
+    .about {
+        padding: calc(3.12rem + 0px) 0;
+        /* Adding 60px to the top padding */
+    }
+
+    .about .about-description {
+        justify-content: space-between;
+        row-gap: 5.125rem;
+        padding: 4rem 0;
+        flex-direction: column;
+    }
+
+    .about-description .text-holder {
+        max-width: 100%;
+    }
+
+    .about-description .card-holder {
+        margin-left: 0;
+    }
+
+    .about-description .card-holder .card {
+        height: 11.25rem;
+        width: 9.75rem;
+    }
+
+    .about-description .card-holder .middle-cards .card:nth-child(2) {
+        height: 11.25rem;
+
+    }
+
+    .about-description .card-holder .card:nth-child(3) {
+        height: 11.25rem;
+    }
+
+    .about-description .card-holder .card:nth-child(1) {
+        padding: 1.1rem;
+        margin-top: 0rem;
+    }
+
+    .projects .projects-holder {
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+        row-gap: 4.25rem
+    }
+    .projects .projects-holder .project-card .read-more {
+        bottom: 1rem;
+        left: 1rem;
+    }    
+    .projects .projects-holder .project-card .read-more{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .projects .projects-holder .project-card .read-more img{
+        width: 2.5rem;
+    }
+    .projects .projects-holder .project-card .expanded{
+        width: 10rem;
+        padding: 0 0.5rem;
+    }
+    .testimonials-holder .section-heading-description p{
+        padding-top: 1rem;
+    }
+    .testimonials-holder .section-heading-description {
+        padding-bottom: 4.25rem;
+    }
+
+    .testimonials-holder .btn-holder {
+        padding-top: 2.25rem;
+    }
+
+    .testimonials-holder .testimonials-cards-holder {
+        justify-content: center;
+    }
+
+    .testimonials-holder .testimonials-cards-holder .cards {
+        flex: 1 0 calc(100% - 1.1rem);
+        /* Each card on a new line with some gap */
+        max-width: calc(100% - 1.1rem);
+        margin-bottom: 6.62rem;
+    }
+    .clients-holder .section-heading-description span {
+        line-height: 1.8;
+    }
+    .clients-holder .section-heading-description p{
+        padding-top: 1rem;
+    }
+    .banner-holder {
+        padding-top: 0rem;
+    }
+
+    .banner-holder .hero-text-holder {
+        margin-top: 20%;
+        text-align: center;
+    }
+    .banner-holder .hero-text-holder{
+        padding-left: 0rem;
+    }
+
+    .banner-holder .hero-text-holder h2 {
+        font-size: 5.5rem;
+    }
+
+    .banner-holder .hero-text-holder h3 {
+        font-size: 3.5rem;
+    }
+
+    .banner-holder .img-holder {
+        width: 100vw;
+        position: absolute;
+        bottom: -0.5rem;
+        right: 0;
+        z-index: 5;
+        opacity: 40%;
+    }
+
+    .offerings {
+        padding-bottom: 4.25rem;
+        padding-top: 4rem;
+    }
+    .contact-holder .text-holder-main{
+        max-width: 90%;
+    }
+    .contact-holder .details-holder{
+        width: 90%;
+    }
+    .contact-holder .text-holder-main p{
+        font-family: 'Gilroy-Bold';
+    }
+    .contact-holder .details-holder .block .address,
+    .contact-holder .details-holder .block  .phone,
+    .contact-holder .details-holder .block  .email{
+        font-family: 'Gilroy-Bold';
+
+    }
+    .contact .contact-holder {
+        padding-top: 4.94rem;
+        padding-bottom: 4.94rem;
+        row-gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-holder .text-holder-main p {
+        color: rgba(0, 0, 0, 0.99);
+    }
+
+    footer {
+        padding-top: 2.38rem;
+        padding-bottom: 4.25rem;
+    }
+    footer .nav-links ul{
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+    footer .social-holder .social-ico-holder {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+/* Small Devices (Tablets) */
+@media only screen and (min-width: 576px) and (max-width: 799px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    .container {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section hr {
+        margin-top: 0.5rem;
+    }
+
+    section h3 {
+        font-size: 1.5rem;
+    }
+
+    .wrapper {
+        padding-left: 2.3rem;
+        padding-right: 2.3rem;
+    }
+
+    .burger {
+        display: block;
+        position: fixed;
+        cursor: pointer;
+        right: 5%;
+        display: block;
+        z-index: 151;
+    }
+
+    .line {
+        width: 33px;
+        height: 4px;
+        background-color: var(--white);
+        margin: 3px 3px;
+        transition: transform 0.3s;
+    }
+
+    /* Additional styles to create the cross icon */
+    .burger.cross .line:nth-child(1) {
+        transform: rotate(-43deg) translate(-5px, 5px);
+        background-color: var(--black-primary);
+    }
+
+    .burger.cross .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.cross .line:nth-child(3) {
+        transform: rotate(43deg) translate(-5px, -5px);
+        background-color: var(--black-primary);
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 151;
+    }
+
+    nav {
+        height: 60px;
+        background-color: var(--black);
+    }
+
+    nav .nav-wrapper {
+        padding-top: 0rem;
+        height: 100%;
+        align-items: center;
+
+    }
+
+    .hero {
+        height: 55.75rem;
+    }
+
+    nav .nav-links {
+        width: 60vw;
+        height: 100vh;
+        border-radius: 2.5rem 0 0 2.5rem;
+        background: var(--white-light);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 150;
+        top: 0;
+        bottom: 0;
+        right: -100%;
+        transition: right 0.5s ease;
+    }
+
+    #v-class {
+        right: 0;
+    }
+
+    nav .nav-links .selected {
+        background-color: var(--white);
+    }
+
+    nav .nav-links ul {
+        margin-top: 30vh;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        row-gap: 3rem;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    nav .nav-links ul li {
+        width: 90%;
+    }
+
+    nav .nav-links ul a {
+        text-decoration: none;
+        color: var(--black);
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        padding: 1rem 1.5rem;
+        border-radius: 0rem;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+    }
+
+
+    .hero-section .graphics-holder1 {
+        width: 22.625rem;
+        height: 22.625rem;
+        left: -7.3rem;
+    }
+
+    .hero-section .graphics-holder2 {
+        width: 9.5625rem;
+        height: 9.5625rem;
+        top: 8.5rem;
+        z-index: 1;
+    }
+
+    .header-placeholder {
+        height: 60px;
+        /* Adjust this value based on your navbar height */
+    }
+
+    .about {
+        padding: calc(3.12rem + 0px) 0;
+        /* Adding 60px to the top padding */
+    }
+
+    .about .about-description {
+        justify-content: space-between;
+        row-gap: 5.125rem;
+        padding: 4rem 0;
+        flex-direction: column;
+    }
+
+    .about-description .text-holder {
+        max-width: 100%;
+    }
+
+    .about-description .card-holder {
+        margin-left: 0;
+    }
+
+    .about-description .card-holder .card {
+        height: 11.25rem;
+        width: 9.75rem;
+    }
+
+    .about-description .card-holder .middle-cards .card:nth-child(2) {
+        height: 11.25rem;
+
+    }
+
+    .about-description .card-holder .card:nth-child(3) {
+        height: 11.25rem;
+    }
+
+    .about-description .card-holder .card:nth-child(1) {
+        padding: 1.1rem;
+        margin-top: 0rem;
+    }
+
+    .projects .projects-holder {
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+        row-gap: 4.25rem
+    }
+
+    .projects .projects-holder .project-card {
+        /* height: 33.5rem; */
+    }
+
+    .testimonials-holder .section-heading-description {
+        padding-bottom: 4.25rem;
+    }
+
+    .testimonials-holder .btn-holder {
+        padding-top: 2.25rem;
+    }
+
+    .testimonials-holder .testimonials-cards-holder {
+        justify-content: center;
+    }
+
+    .testimonials-holder .testimonials-cards-holder .cards {
+        flex: 1 0 calc(90% - 1.1rem);
+        /* Each card on a new line with some gap */
+        max-width: calc(90% - 1.1rem);
+        margin-bottom: 6.62rem;
+    }
+
+    .banner-holder {
+        padding-top: 1rem;
+    }
+
+    .banner-holder .hero-text-holder {
+        margin-top: 15%;
+    }
+
+    .banner-holder .hero-text-holder h2 {
+        font-size: 5.5rem;
+    }
+
+    .banner-holder .hero-text-holder h3 {
+        font-size: 3.5rem;
+    }
+
+    .banner-holder .img-holder {
+        width: 38.0625rem;
+        height: 25.375rem;
+        position: absolute;
+        bottom: 0;
+        right: 5.87rem;
+        z-index: 5;
+        opacity: 55%;
+    }
+
+    .offerings {
+        padding-bottom: 4.25rem;
+        padding-top: 4rem;
+    }
+
+    .contact .contact-holder {
+        padding-top: 4.94rem;
+        padding-bottom: 4.94rem;
+        column-gap: 2rem;
+    }
+
+    .contact-holder .text-holder-main p {
+        color: rgba(0, 0, 0, 0.99);
+    }
+
+    footer {
+        padding-top: 2.38rem;
+        padding-bottom: 4.25rem;
+    }
+
+    footer .social-holder .social-ico-holder {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+/* Medium Devices (Laptops) */
+
+@media only screen and (min-width: 800px) and (max-width: 991px) {
+    html {
+        font-size: 12px;
+    }
+
+    .container {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section hr {
+        margin-top: 0.5rem;
+    }
+
+    section h3 {
+        font-size: 1.5rem;
+    }
+
+    .wrapper {
+        padding-left: 3.3rem;
+        padding-right: 3.3rem;
+    }
+
+    header .wrapper {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .hero-section .graphics-holder1 {
+        width: 26.625rem;
+        height: 26.625rem;
+        left: -7.3rem;
+    }
+
+    .hero-section .graphics-holder2 {
+        width: 13.5625rem;
+        height: 13.5625rem;
+        top: 8.5rem;
+        z-index: 2;
+    }
+
+
+    .about .about-description {
+        justify-content: space-between;
+        column-gap: 3.125rem;
+        padding: 4rem 0;
+    }
+
+    .about-description .card-holder {
+        margin-left: 0;
+    }
+
+    .projects .projects-holder {
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+        row-gap: 4.25rem
+    }
+
+    .testimonials-holder .section-heading-description {
+        padding-bottom: 4.25rem;
+    }
+
+    .testimonials-holder .btn-holder {
+        padding-top: 4.25rem;
+    }
+
+    .testimonials-holder .testimonials-cards-holder .cards {
+        flex: 1 0 calc(50% - 1.1rem);
+        max-width: calc(50% - 1.1rem);
+    }
+
+    .banner-holder {
+        padding-top: 1rem;
+    }
+
+    .banner-holder .hero-text-holder {
+        margin-top: 15%;
+    }
+
+    .banner-holder .hero-text-holder h2 {
+        font-size: 5.5rem;
+    }
+
+    .banner-holder .hero-text-holder h3 {
+        font-size: 3.5rem;
+    }
+
+    .banner-holder .img-holder {
+        width: 38.0625rem;
+        height: 25.375rem;
+        position: absolute;
+        bottom: 0;
+        right: 5.87rem;
+        z-index: 5;
+        opacity: 55%;
+    }
+
+    .offerings {
+        padding-bottom: 4.25rem;
+        padding-top: 4rem;
+    }
+
+    .contact .contact-holder {
+        padding-top: 4.94rem;
+        padding-bottom: 4.94rem;
+        column-gap: 2rem;
+    }
+
+    .contact-holder .text-holder-main p {
+        color: rgba(0, 0, 0, 0.99);
+    }
+
+    footer {
+        padding-top: 2.38rem;
+        padding-bottom: 4.25rem;
+    }
+
+    footer .social-holder .social-ico-holder {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+/* Large Devices (Desktops) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    html {
+        font-size: 12px;
+    }
+
+    .container {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .wrapper {
+        padding-left: 7.3rem;
+        padding-right: 7.3rem;
+    }
+
+    .hero-section .graphics-holder1 {
+        width: 26.625rem;
+        height: 26.625rem;
+        left: -7.3rem;
+    }
+
+    .hero-section .graphics-holder2 {
+        width: 13.5625rem;
+        height: 13.5625rem;
+        top: 8.5rem;
+        z-index: 2;
+    }
+
+
+    .about .about-description {
+        justify-content: space-between;
+        column-gap: 3.125rem;
+    }
+
+    .about-description .card-holder {
+        margin-left: 0;
+    }
+
+    .banner-holder .img-holder {
+        width: 41.0625rem;
+        height: 28.375rem;
+        position: absolute;
+        bottom: 0;
+        right: 5.87rem;
+        z-index: 5;
+        opacity: 55%;
+    }
+
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .wrapper {
+        padding-left: 7.3rem;
+        padding-right: 7.3rem;
+    }
+
+    .banner-holder .img-holder {
+        width: 43.0625rem;
+        height: 30.375rem;
+        position: absolute;
+        bottom: 0;
+        right: 5.87rem;
+        z-index: 5;
+        opacity: 55%;
+    }
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media only screen and (min-width: 1440px) {
+    /* Styles for extra large devices */
 }
