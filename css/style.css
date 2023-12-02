@@ -2,14 +2,22 @@
     font-family: 'Gilroy-Medium';
     src: url('../fonts/Gilroy-Medium.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'Gilroy-Bold';
     src: url('../fonts/Gilroy-Bold.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Gilroy-ExtraBold';
+    src: url('../fonts/Gilroy-ExtraBold.ttf') format('truetype');
+}
+
 @font-face {
     font-family: 'Homemade-Apple';
     src: url('../fonts/HomemadeApple.ttf') format('truetype');
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -29,19 +37,23 @@ html {
     --black-secondary: #1D2024;
     --purple-light: #AFA6F2;
 }
-body{
+
+body {
     background-color: var(--black-primary);
 }
-.container{
+
+.container {
     max-width: 90rem;
     margin-left: auto;
     margin-right: auto;
 }
-.wrapper{
-    padding-left:  8.3rem;
+
+.wrapper {
+    padding-left: 8.3rem;
     padding-right: 8.3rem;
 }
-nav{
+
+nav {
     width: 100%;
     height: 200px;
     position: absolute;
@@ -50,7 +62,8 @@ nav{
     left: 0;
     z-index: 10;
 }
-nav .nav-wrapper{
+
+nav .nav-wrapper {
     width: 100%;
     display: flex;
     padding-top: 3.75rem;
@@ -58,15 +71,18 @@ nav .nav-wrapper{
     align-items: center;
 
 }
-nav .logo-holder{
+
+nav .logo-holder {
     width: 10.875rem;
     height: 2.25rem;
 }
-nav .logo-holder img{
+
+nav .logo-holder img {
     width: 100%;
     height: auto;
 }
-nav .nav-links{
+
+nav .nav-links {
     width: 49.5625rem;
     height: 4.3125rem;
     border-radius: 2.5rem;
@@ -75,33 +91,40 @@ nav .nav-links{
     justify-content: center;
     align-items: center;
 }
-nav .nav-links .selected{
+
+nav .nav-links .selected {
     background-color: var(--white);
 }
-nav .nav-links ul{
+
+nav .nav-links ul {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
 }
-nav .nav-links ul a{
+
+nav .nav-links ul a {
     text-decoration: none;
     color: var(--black);
     text-transform: uppercase;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
-    padding: 0.65rem 1.25rem;;
-    border-radius: 1.875rem;;
+    padding: 0.65rem 1.25rem;
+    ;
+    border-radius: 1.875rem;
+    ;
     display: block;
     height: 2.625rem;
 }
-.hero{
+
+.hero {
     background-color: var(--black);
     height: 46.75rem;
 }
-.hero-section{
+
+.hero-section {
     position: relative;
     height: 100%;
     display: flex;
@@ -109,14 +132,16 @@ nav .nav-links ul a{
     align-items: center;
     overflow: hidden;
 }
-.hero-section .text-holder{
+
+.hero-section .text-holder {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 15;
 }
-.hero-section .text-holder h1{
+
+.hero-section .text-holder h1 {
     margin-top: 4rem;
     color: var(--white);
     font-size: 6rem;
@@ -124,7 +149,8 @@ nav .nav-links ul a{
     font-weight: 400;
     line-height: normal;
 }
-.hero-section .text-holder h2{
+
+.hero-section .text-holder h2 {
     color: var(--purple-light);
     font-family: 'Homemade-Apple';
     font-size: 4rem;
@@ -132,7 +158,8 @@ nav .nav-links ul a{
     font-weight: 400;
     line-height: 2;
 }
-.hero-section .text-holder button{
+
+.hero-section .text-holder button {
     width: 11.875rem;
     height: 3.375rem;
     border-radius: 1.875rem;
@@ -146,6 +173,7 @@ nav .nav-links ul a{
     line-height: normal;
     margin-top: 1rem;
 }
+
 .hero-section .graphics-holder1 {
     width: 31.625rem;
     height: 31.625rem;
@@ -163,16 +191,18 @@ nav .nav-links ul a{
     right: -5.13rem;
     z-index: 2;
 }
-.hero-section img{
+
+.hero-section img {
     width: 100%;
 }
 
 
-.about{
+.about {
     height: 52.19rem;
     padding: 3.12rem 0;
 }
-.about .about-quote .section-heading h3{
+
+.about .about-quote .section-heading h3 {
     color: var(--white);
     font-size: 1.25rem;
     font-style: normal;
@@ -180,19 +210,22 @@ nav .nav-links ul a{
     line-height: normal;
     height: 1.5rem;
 }
-.about .about-quote .section-heading hr{
+
+.about .about-quote .section-heading hr {
     margin-top: 0.25rem;
     width: 17.4375rem;
     height: 0.0625rem;
 }
-.about .about-quote .section-heading-description p{
+
+.about .about-quote .section-heading-description p {
     color: var(--white);
     font-size: 3rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
-.about .about-quote .section-heading-description span{
+
+.about .about-quote .section-heading-description span {
     color: var(--purple-light);
     font-family: "Homemade-Apple";
     font-size: 2.25rem;
@@ -200,24 +233,28 @@ nav .nav-links ul a{
     line-height: 1.1;
     padding-left: 10px;
 }
-.about .about-quote .section-heading-description{
+
+.about .about-quote .section-heading-description {
     max-width: 63.4375rem;
     padding: 1.88rem 0;
 }
-.about .about-description{
+
+.about .about-description {
     display: flex;
     column-gap: 6.125rem;
     align-items: center;
     padding: 6rem 0;
 }
-.about-description .card-holder{
+
+.about-description .card-holder {
     max-width: 31rem;
     display: flex;
     column-gap: 1.5rem;
     align-items: center;
     margin-left: -4rem;
 }
-.about-description .card-holder .card{
+
+.about-description .card-holder .card {
     background-color: var(--white-light);
     width: 8.75rem;
     height: 9.625rem;
@@ -229,45 +266,55 @@ nav .nav-links ul a{
     align-items: center;
     justify-content: center;
 }
-.about-description .card-holder .card p{
+
+.about-description .card-holder .card p {
     color: var(--black);
-    font-family:'Gilroy-Bold';
+    font-family: 'Gilroy-Bold';
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     padding-top: 1.19rem;
 }
-.about-description .card-holder .card img{
+
+.about-description .card-holder .card img {
     object-fit: contain;
     width: 100%;
     filter: brightness(1) invert(0);
 }
-.about-description .card-holder .card img:nth-child(1){
+
+.about-description .card-holder .card img:nth-child(1) {
     height: 60%;
 }
-.about-description .card-holder .middle-cards{
+
+.about-description .card-holder .middle-cards {
     display: flex;
     flex-direction: column;
     row-gap: 1.44rem;
 }
+
 .about-description .card-holder .middle-cards .card:nth-child(2) {
     height: 11.25rem;
 }
-.about-description .card-holder  .card:nth-child(3) {
+
+.about-description .card-holder .card:nth-child(3) {
     height: 11.5rem;
 }
-.about-description .card-holder  .card:nth-child(1) {
+
+.about-description .card-holder .card:nth-child(1) {
     padding: 1.1rem;
     margin-top: -1.8rem;
 }
-.about-description .card-holder .middle-cards .card:nth-child(1) p{
+
+.about-description .card-holder .middle-cards .card:nth-child(1) p {
     padding-top: 0.6rem;
 }
-.about-description .text-holder{
+
+.about-description .text-holder {
     max-width: 42.125rem;
 }
-.about-description .text-holder p{
+
+.about-description .text-holder p {
     color: var(--white);
     font-family: 'Gilroy-Medium';
     font-size: 1.5rem;
@@ -276,17 +323,17 @@ nav .nav-links ul a{
     line-height: 2.121rem;
 }
 
-.projects{
+.projects {}
 
-}
-.projects .projects-holder{
+.projects .projects-holder {
     display: flex;
     flex-direction: column;
     row-gap: 6.25rem;
     padding-bottom: 3.2rem;
     padding-top: 3.2rem;
 }
-.projects .projects-holder .project-card{
+
+.projects .projects-holder .project-card {
     width: 100%;
     height: 37.5rem;
     background-color: #F4F2FF;
@@ -294,25 +341,29 @@ nav .nav-links ul a{
     position: relative;
     cursor: pointer;
 }
-.projects .projects-holder .project-card img{
+
+.projects .projects-holder .project-card img {
     width: 100%;
     height: 100%;
 }
+
 .projects .projects-holder .project-card:nth-child(3) img,
-.projects .projects-holder .project-card:nth-child(6) img{
+.projects .projects-holder .project-card:nth-child(6) img {
     width: 36.375rem;
     height: 30.25rem;
 }
+
 .projects .projects-holder .project-card:nth-child(3),
-.projects .projects-holder .project-card:nth-child(6){
+.projects .projects-holder .project-card:nth-child(6) {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.projects .projects-holder .project-card .read-more{
-   position: absolute;
-   bottom: 1.44rem;
-   left: 2.6rem;
+
+.projects .projects-holder .project-card .read-more {
+    position: absolute;
+    bottom: 1.44rem;
+    left: 2.6rem;
     width: 3.375rem;
     height: 3.375rem;
     border-radius: 1.875rem;
@@ -325,47 +376,52 @@ nav .nav-links ul a{
     justify-content: space-between;
     transition: 0.5s ease-in-out;
 }
+
 .projects .projects-holder .project-card .expanded {
     width: 11.875rem;
     height: 3.375rem;
     padding: 0 1.1rem;
 }
-.projects .projects-holder .project-card .read-more img{
+
+.projects .projects-holder .project-card .read-more img {
     width: 3.375rem;
     height: 3.375rem;
 
     padding-left: 1;
 }
+
 .project-card .arrow-up {
     transform: rotate(-50.115deg);
     transition: transform 0.5s ease-in-out;
 }
 
 .project-card .arrow-up.rotated {
-    transform: rotate(0deg); /* Rotate to 0 degrees */
+    transform: rotate(0deg);
+    /* Rotate to 0 degrees */
 }
 
-.projects .projects-holder .project-card .expanded p{
+.projects .projects-holder .project-card .expanded p {
     color: #FFF;
     font-family: 'Gilroy-Medium';
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    white-space: nowrap; /* Prevent text from wrapping to a new line */
+    white-space: nowrap;
+    /* Prevent text from wrapping to a new line */
     overflow: hidden;
 }
 
 
-.services{
-}
-.services .services-holder{
+.services {}
+
+.services .services-holder {
     padding-top: 3.2rem;
     padding-bottom: 3.2rem;
     height: 100%;
 }
 
-.services .services-holder .section-heading h3{
+.services .services-holder .section-heading h3 {
     color: var(--white);
     font-size: 1.25rem;
     font-style: normal;
@@ -373,19 +429,22 @@ nav .nav-links ul a{
     line-height: normal;
     height: 1.5rem;
 }
-.services .services-holder .section-heading hr{
+
+.services .services-holder .section-heading hr {
     margin-top: 0.25rem;
     width: 17.4375rem;
     height: 0.0625rem;
 }
-.services .services-holder .section-heading-description p{
+
+.services .services-holder .section-heading-description p {
     color: var(--white);
     font-size: 3rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
-.services .services-holder .section-heading-description span{
+
+.services .services-holder .section-heading-description span {
     color: var(--purple-light);
     font-family: "Homemade-Apple";
     font-size: 2.25rem;
@@ -393,11 +452,13 @@ nav .nav-links ul a{
     line-height: 1.5;
     padding-left: 10px;
 }
-.services .services-holder .section-heading-description{
+
+.services .services-holder .section-heading-description {
     max-width: 63.4375rem;
     padding: 1.88rem 0;
 }
-.services .services-holder .section-heading-details p{
+
+.services .services-holder .section-heading-details p {
     color: #FFF;
     font-family: 'Gilroy-Medium';
     width: 98%;
@@ -407,26 +468,28 @@ nav .nav-links ul a{
     line-height: 2.121rem;
 }
 
-.banner-bottom{
+.banner-bottom {
     background: linear-gradient(358deg, #000 0.11%, rgba(0, 0, 0, 0.00) 101%, #1D2024 101%);
 
 }
-.banner-holder{
+
+.banner-holder {
     height: 35.187rem;
     padding-top: 3.2rem;
     position: relative;
 }
 
-.banner-holder .hero-text-holder{
+.banner-holder .hero-text-holder {
     float: left;
     text-align: center;
     padding-left: 1.62rem;
     margin-top: 3.3rem;
     position: relative;
     z-index: 10;
-    
+
 }
-.banner-holder .hero-text-holder h2{
+
+.banner-holder .hero-text-holder h2 {
     color: #FFF;
     font-family: 'Gilroy-Medium';
     font-size: 6rem;
@@ -435,7 +498,8 @@ nav .nav-links ul a{
     line-height: normal;
     z-index: 10;
 }
-.banner-holder .hero-text-holder h3{
+
+.banner-holder .hero-text-holder h3 {
     color: #AFA6F2;
     font-family: 'Homemade-Apple';
     font-size: 4rem;
@@ -444,7 +508,8 @@ nav .nav-links ul a{
     line-height: normal;
     z-index: 10;
 }
-.banner-holder .img-holder{
+
+.banner-holder .img-holder {
     width: 43.0625rem;
     height: 30.375rem;
     position: absolute;
@@ -453,20 +518,22 @@ nav .nav-links ul a{
     z-index: 5;
     opacity: 55%;
 }
-.banner-holder .img-holder img{
+
+.banner-holder .img-holder img {
     width: 100%;
     height: 100%;
 }
 
 
-.testimonials{
-}
-.testimonials-holder{
+.testimonials {}
+
+.testimonials-holder {
     padding-top: 6.25rem;
     padding-bottom: 6.25rem;
     height: 100%;
 }
-.testimonials-holder .section-heading h3{
+
+.testimonials-holder .section-heading h3 {
     color: var(--white);
     font-size: 1.25rem;
     font-style: normal;
@@ -474,23 +541,27 @@ nav .nav-links ul a{
     line-height: normal;
     height: 1.5rem;
 }
-.testimonials-holder .section-heading hr{
+
+.testimonials-holder .section-heading hr {
     margin-top: 0.25rem;
     width: 17.4375rem;
     height: 0.0625rem;
 }
-.testimonials-holder .section-heading-description{
+
+.testimonials-holder .section-heading-description {
     max-width: 63.4375rem;
     padding-bottom: 6.25rem;
 }
-.testimonials-holder .section-heading-description p{
+
+.testimonials-holder .section-heading-description p {
     color: var(--white);
     font-size: 3rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
-.testimonials-holder .section-heading-description span{
+
+.testimonials-holder .section-heading-description span {
     color: #AFA6F2;
     font-family: 'Homemade-Apple';
     font-size: 3rem;
@@ -500,7 +571,7 @@ nav .nav-links ul a{
     padding-left: 1.2rem;
 }
 
-.testimonials-holder .testimonials-cards-holder{
+.testimonials-holder .testimonials-cards-holder {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -508,22 +579,26 @@ nav .nav-links ul a{
     column-gap: 4rem;
     flex-wrap: wrap;
 }
-.testimonials-holder .testimonials-cards-holder .cards{
+
+.testimonials-holder .testimonials-cards-holder .cards {
     display: flex;
     max-height: 21.3rem;
     column-gap: 1.81rem;
     max-width: 34.5rem;
 }
-.testimonials-holder .testimonials-cards-holder .cards .pfp-holder{
+
+.testimonials-holder .testimonials-cards-holder .cards .pfp-holder {
     width: 4.375rem;
     height: 4.375rem;
 }
-.testimonials-holder .testimonials-cards-holder .cards .pfp-holder img{
+
+.testimonials-holder .testimonials-cards-holder .cards .pfp-holder img {
     object-fit: contain;
     width: -webkit-fill-available;
     border-radius: 50%;
 }
-.testimonials-holder .testimonials-cards-holder .cards .name{
+
+.testimonials-holder .testimonials-cards-holder .cards .name {
     color: #FFF;
     font-size: 2rem;
     font-style: normal;
@@ -531,27 +606,31 @@ nav .nav-links ul a{
     line-height: normal;
     padding: 0.30rem 0;
 }
-.testimonials-holder .testimonials-cards-holder .cards .designation{
+
+.testimonials-holder .testimonials-cards-holder .cards .designation {
     color: #AFA6F2;
-font-size: 1.5rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
-.testimonials-holder .testimonials-cards-holder .cards .review{
+
+.testimonials-holder .testimonials-cards-holder .cards .review {
     color: #FFF;
-font-size: 1.5rem;
-font-style: normal;
-font-weight: 400;
-padding-top: 1rem;
-line-height: normal;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    padding-top: 1rem;
+    line-height: normal;
 
 }
-.testimonials-holder .btn-holder{
+
+.testimonials-holder .btn-holder {
     padding-top: 6.25rem;
     text-align: center;
 }
-.testimonials-holder .btn-holder button{
+
+.testimonials-holder .btn-holder button {
     width: 11.875rem;
     height: 3.375rem;
     border-radius: 1.875rem;
@@ -564,13 +643,11 @@ line-height: normal;
 }
 
 
-.clients{
+.clients {}
 
-}
-.clients-holder{
+.clients-holder {}
 
-}
-.clients-holder .section-heading h3{
+.clients-holder .section-heading h3 {
     color: var(--white);
     font-size: 1.25rem;
     font-style: normal;
@@ -578,23 +655,27 @@ line-height: normal;
     line-height: normal;
     height: 1.5rem;
 }
-.clients-holder .section-heading hr{
+
+.clients-holder .section-heading hr {
     margin-top: 0.25rem;
     width: 17.4375rem;
     height: 0.0625rem;
 }
-.clients-holder .section-heading-description{
+
+.clients-holder .section-heading-description {
     max-width: 63.4375rem;
     /* padding-top: ; */
 }
-.clients-holder .section-heading-description p{
+
+.clients-holder .section-heading-description p {
     color: var(--white);
     font-size: 3rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
-.clients-holder .section-heading-description span{
+
+.clients-holder .section-heading-description span {
     color: #AFA6F2;
     font-family: 'Homemade-Apple';
     font-size: 3rem;
@@ -603,7 +684,8 @@ line-height: normal;
     line-height: normal;
     padding-left: 1.5rem;
 }
-.clients-holder .client-logos{
+
+.clients-holder .client-logos {
     display: flex;
     max-width: 90rem;
     justify-content: center;
@@ -613,25 +695,196 @@ line-height: normal;
 
 }
 
-.offerings{
+.offerings {
     padding-bottom: 6.25rem;
     padding-top: 6rem;
 }
-.offerings-holder{
+
+.offerings-holder {
     overflow: hidden;
 }
-.offerings-holder h1{
+
+.offerings-holder h1 {
     text-align: center;
     color: #FFF;
-font-size: 6rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-wrap: nowrap;
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-wrap: nowrap;
 
 }
-.offerings-holder h1 span{
+
+.offerings-holder h1 span {
     font-size: 8rem;
     vertical-align: middle;
 }
 
+.contact {
+    height: 32.9375rem;
+    background: url('../img/contact-bg.png');
+}
+
+.contact .contact-holder {
+    padding-top: 6.94rem;
+    padding-bottom: 6.94rem;
+}
+
+.contact .contact-holder {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: top;
+}
+
+.contact-holder .text-holder-main {
+    max-width: 29.75rem;
+}
+
+.contact-holder .text-holder-main h2 {
+    color: #000;
+    font-family: 'Gilroy-ExtraBold';
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.contact-holder .text-holder-main p {
+    color: rgba(0, 0, 0, 0.62);
+    font-family: 'Gilroy-Medium';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 1.81rem;
+}
+
+.contact-holder .details-holder .block {
+    display: flex;
+    column-gap: 1.25rem;
+    margin-top: 1.81rem;
+
+}
+
+.contact-holder .details-holder .block .address {
+    color: #000;
+    font-family: 'Gilroy-Medium';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.125rem;
+    /* 141.667% */
+    max-width: 29.75rem;
+}
+
+.contact-holder .details-holder .block .phone {
+    color: #000;
+    font-family: 'Gilroy-Medium';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.075rem;
+    text-transform: capitalize;
+}
+
+.contact-holder .details-holder .block .email {
+    color: #000;
+    font-family: 'Gilroy-Medium';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.075rem;
+    text-transform: lowercase;
+}
+
+.contact-holder .details-holder .block svg {
+    margin-top: 0.35rem;
+}
+
+
+footer {
+    padding-top: 4.38rem;
+    padding-bottom: 6.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .logo-holder {
+    max-width: 14.1875rem;
+    max-height: 2.9375rem;
+}
+
+footer .logo-holder img {
+    width: 100%;
+}
+
+footer .nav-links {
+    padding-top: 2.62rem;
+    padding-bottom: 2.4rem;
+}
+
+footer .nav-links ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    column-gap: 3.06rem;
+}
+
+footer .nav-links ul li a {
+    color: #FFF;
+    font-family: 'Gilroy-Medium';
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+}
+footer .social-holder{
+    display: flex;
+    column-gap: 1.2rem;
+    margin-bottom: 2.62rem;
+}
+footer hr{
+    background: #D1CFCF;
+    height: 0.0625rem;
+    width: 100%;
+}
+footer .social-holder .social-ico-holder {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 0.5px solid var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social-holder .social-ico-holder svg {
+    width: 100%;
+    object-fit: contain;
+}
+footer .credits p:nth-child(1){
+    color: #FFF;
+    text-align: center;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 0.00938rem;
+    margin-top: 1.2rem;
+}
+footer .credits p:nth-child(2){
+    color: #FFF;
+    text-align: center;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.72144rem; 
+    letter-spacing: 0.0075rem;
+}
