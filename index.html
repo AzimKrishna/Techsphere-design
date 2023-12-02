@@ -9,6 +9,17 @@
     <title>TechSphere</title>
 </head>
 <body>
+    <div id="overlay">
+        <div class="loader">
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            </div>
+    </div>
     <header>
         <nav class="container wrapper">
             <div class="nav-wrapper">
@@ -387,6 +398,11 @@
         </div>
         
     </footer>
+    <script>
+        window.addEventListener('load', function () {
+            document.getElementById('overlay').style.display = 'none';
+        });
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <script src="js/script.js"></script>
