@@ -3,6 +3,10 @@
     src: url('../fonts/Gilroy-Medium.ttf') format('truetype');
 }
 @font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('../fonts/Gilroy-Bold.ttf') format('truetype');
+}
+@font-face {
     font-family: 'Homemade-Apple';
     src: url('../fonts/HomemadeApple.ttf') format('truetype');
 }
@@ -19,6 +23,7 @@ html {
 
 :root {
     --white: #fff;
+    --white-light: #F8FAFB;
     --black: #000;
     --black-primary: #151515;
     --black-secondary: #1D2024;
@@ -70,6 +75,9 @@ nav .nav-links{
     justify-content: center;
     align-items: center;
 }
+nav .nav-links .selected{
+    background-color: var(--white);
+}
 nav .nav-links ul{
     display: flex;
     width: 100%;
@@ -106,6 +114,7 @@ nav .nav-links ul a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 15;
 }
 .hero-section .text-holder h1{
     margin-top: 4rem;
@@ -130,11 +139,12 @@ nav .nav-links ul a{
     background: var(--black-secondary);
     color: var(--white);
     font-family: 'Gilroy-Medium';
+    border: none;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: 0.6rem;
+    margin-top: 1rem;
 }
 .hero-section .graphics-holder1 {
     width: 31.625rem;
@@ -142,6 +152,7 @@ nav .nav-links ul a{
     position: absolute;
     left: -7.3rem;
     bottom: 0;
+    z-index: 2;
 }
 
 .hero-section .graphics-holder2 {
@@ -150,7 +161,477 @@ nav .nav-links ul a{
     position: absolute;
     top: 8.5rem;
     right: -5.13rem;
+    z-index: 2;
 }
 .hero-section img{
     width: 100%;
 }
+
+
+.about{
+    height: 52.19rem;
+    padding: 3.12rem 0;
+}
+.about .about-quote .section-heading h3{
+    color: var(--white);
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    height: 1.5rem;
+}
+.about .about-quote .section-heading hr{
+    margin-top: 0.25rem;
+    width: 17.4375rem;
+    height: 0.0625rem;
+}
+.about .about-quote .section-heading-description p{
+    color: var(--white);
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.about .about-quote .section-heading-description span{
+    color: var(--purple-light);
+    font-family: "Homemade-Apple";
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 1.1;
+    padding-left: 10px;
+}
+.about .about-quote .section-heading-description{
+    max-width: 63.4375rem;
+    padding: 1.88rem 0;
+}
+.about .about-description{
+    display: flex;
+    column-gap: 6.125rem;
+    align-items: center;
+    padding: 6rem 0;
+}
+.about-description .card-holder{
+    max-width: 31rem;
+    display: flex;
+    column-gap: 1.5rem;
+    align-items: center;
+    margin-left: -4rem;
+}
+.about-description .card-holder .card{
+    background-color: var(--white-light);
+    width: 8.75rem;
+    height: 9.625rem;
+    border-radius: 1.25rem;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    padding: 1.94rem 1.81rem;
+    align-items: center;
+    justify-content: center;
+}
+.about-description .card-holder .card p{
+    color: var(--black);
+    font-family:'Gilroy-Bold';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 1.19rem;
+}
+.about-description .card-holder .card img{
+    object-fit: contain;
+    width: 100%;
+    filter: brightness(1) invert(0);
+}
+.about-description .card-holder .card img:nth-child(1){
+    height: 60%;
+}
+.about-description .card-holder .middle-cards{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.44rem;
+}
+.about-description .card-holder .middle-cards .card:nth-child(2) {
+    height: 11.25rem;
+}
+.about-description .card-holder  .card:nth-child(3) {
+    height: 11.5rem;
+}
+.about-description .card-holder  .card:nth-child(1) {
+    padding: 1.1rem;
+    margin-top: -1.8rem;
+}
+.about-description .card-holder .middle-cards .card:nth-child(1) p{
+    padding-top: 0.6rem;
+}
+.about-description .text-holder{
+    max-width: 42.125rem;
+}
+.about-description .text-holder p{
+    color: var(--white);
+    font-family: 'Gilroy-Medium';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.121rem;
+}
+
+.projects{
+
+}
+.projects .projects-holder{
+    display: flex;
+    flex-direction: column;
+    row-gap: 6.25rem;
+    padding-bottom: 3.2rem;
+    padding-top: 3.2rem;
+}
+.projects .projects-holder .project-card{
+    width: 100%;
+    height: 37.5rem;
+    background-color: #F4F2FF;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.projects .projects-holder .project-card img{
+    width: 100%;
+    height: 100%;
+}
+.projects .projects-holder .project-card:nth-child(3) img,
+.projects .projects-holder .project-card:nth-child(6) img{
+    width: 36.375rem;
+    height: 30.25rem;
+}
+.projects .projects-holder .project-card:nth-child(3),
+.projects .projects-holder .project-card:nth-child(6){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.projects .projects-holder .project-card .read-more{
+   position: absolute;
+   bottom: 1.44rem;
+   left: 2.6rem;
+    width: 3.375rem;
+    height: 3.375rem;
+    border-radius: 1.875rem;
+    background: #1D2024;
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    justify-content: space-between;
+    transition: 0.5s ease-in-out;
+}
+.projects .projects-holder .project-card .expanded {
+    width: 11.875rem;
+    height: 3.375rem;
+    padding: 0 1.1rem;
+}
+.projects .projects-holder .project-card .read-more img{
+    width: 3.375rem;
+    height: 3.375rem;
+
+    padding-left: 1;
+}
+.project-card .arrow-up {
+    transform: rotate(-50.115deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.project-card .arrow-up.rotated {
+    transform: rotate(0deg); /* Rotate to 0 degrees */
+}
+
+.projects .projects-holder .project-card .expanded p{
+    color: #FFF;
+    font-family: 'Gilroy-Medium';
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap; /* Prevent text from wrapping to a new line */
+    overflow: hidden;
+}
+
+
+.services{
+}
+.services .services-holder{
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+    height: 100%;
+}
+
+.services .services-holder .section-heading h3{
+    color: var(--white);
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    height: 1.5rem;
+}
+.services .services-holder .section-heading hr{
+    margin-top: 0.25rem;
+    width: 17.4375rem;
+    height: 0.0625rem;
+}
+.services .services-holder .section-heading-description p{
+    color: var(--white);
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.services .services-holder .section-heading-description span{
+    color: var(--purple-light);
+    font-family: "Homemade-Apple";
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding-left: 10px;
+}
+.services .services-holder .section-heading-description{
+    max-width: 63.4375rem;
+    padding: 1.88rem 0;
+}
+.services .services-holder .section-heading-details p{
+    color: #FFF;
+    font-family: 'Gilroy-Medium';
+    width: 98%;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.121rem;
+}
+
+.banner-bottom{
+    background: linear-gradient(358deg, #000 0.11%, rgba(0, 0, 0, 0.00) 101%, #1D2024 101%);
+
+}
+.banner-holder{
+    height: 35.187rem;
+    padding-top: 3.2rem;
+    position: relative;
+}
+
+.banner-holder .hero-text-holder{
+    float: left;
+    text-align: center;
+    padding-left: 1.62rem;
+    margin-top: 3.3rem;
+    position: relative;
+    z-index: 10;
+    
+}
+.banner-holder .hero-text-holder h2{
+    color: #FFF;
+    font-family: 'Gilroy-Medium';
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    z-index: 10;
+}
+.banner-holder .hero-text-holder h3{
+    color: #AFA6F2;
+    font-family: 'Homemade-Apple';
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    z-index: 10;
+}
+.banner-holder .img-holder{
+    width: 43.0625rem;
+    height: 30.375rem;
+    position: absolute;
+    bottom: 0;
+    right: 9.87rem;
+    z-index: 5;
+    opacity: 55%;
+}
+.banner-holder .img-holder img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.testimonials{
+}
+.testimonials-holder{
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+    height: 100%;
+}
+.testimonials-holder .section-heading h3{
+    color: var(--white);
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    height: 1.5rem;
+}
+.testimonials-holder .section-heading hr{
+    margin-top: 0.25rem;
+    width: 17.4375rem;
+    height: 0.0625rem;
+}
+.testimonials-holder .section-heading-description{
+    max-width: 63.4375rem;
+    padding-bottom: 6.25rem;
+}
+.testimonials-holder .section-heading-description p{
+    color: var(--white);
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.testimonials-holder .section-heading-description span{
+    color: #AFA6F2;
+    font-family: 'Homemade-Apple';
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 1.2rem;
+}
+
+.testimonials-holder .testimonials-cards-holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 4.62rem;
+    column-gap: 4rem;
+    flex-wrap: wrap;
+}
+.testimonials-holder .testimonials-cards-holder .cards{
+    display: flex;
+    max-height: 21.3rem;
+    column-gap: 1.81rem;
+    max-width: 34.5rem;
+}
+.testimonials-holder .testimonials-cards-holder .cards .pfp-holder{
+    width: 4.375rem;
+    height: 4.375rem;
+}
+.testimonials-holder .testimonials-cards-holder .cards .pfp-holder img{
+    object-fit: contain;
+    width: -webkit-fill-available;
+    border-radius: 50%;
+}
+.testimonials-holder .testimonials-cards-holder .cards .name{
+    color: #FFF;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0.30rem 0;
+}
+.testimonials-holder .testimonials-cards-holder .cards .designation{
+    color: #AFA6F2;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.testimonials-holder .testimonials-cards-holder .cards .review{
+    color: #FFF;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 400;
+padding-top: 1rem;
+line-height: normal;
+
+}
+.testimonials-holder .btn-holder{
+    padding-top: 6.25rem;
+    text-align: center;
+}
+.testimonials-holder .btn-holder button{
+    width: 11.875rem;
+    height: 3.375rem;
+    border-radius: 1.875rem;
+    background: #AFA6F2;
+    color: #000;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.clients{
+
+}
+.clients-holder{
+
+}
+.clients-holder .section-heading h3{
+    color: var(--white);
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    height: 1.5rem;
+}
+.clients-holder .section-heading hr{
+    margin-top: 0.25rem;
+    width: 17.4375rem;
+    height: 0.0625rem;
+}
+.clients-holder .section-heading-description{
+    max-width: 63.4375rem;
+    /* padding-top: ; */
+}
+.clients-holder .section-heading-description p{
+    color: var(--white);
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.clients-holder .section-heading-description span{
+    color: #AFA6F2;
+    font-family: 'Homemade-Apple';
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 1.5rem;
+}
+.clients-holder .client-logos{
+    display: flex;
+    max-width: 90rem;
+    justify-content: center;
+    column-gap: 5rem;
+    padding-bottom: 2.62rem;
+    padding-top: 2.62rem;
+
+}
+
+.offerings{
+    padding-bottom: 6.25rem;
+    padding-top: 6rem;
+}
+.offerings-holder{
+    overflow: hidden;
+}
+.offerings-holder h1{
+    text-align: center;
+    color: #FFF;
+font-size: 6rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-wrap: nowrap;
+
+}
+.offerings-holder h1 span{
+    font-size: 8rem;
+    vertical-align: middle;
+}
+
