@@ -28,7 +28,9 @@
 html {
     scroll-behavior: smooth;
 }
-
+button{
+    border: none;
+}
 :root {
     --white: #fff;
     --white-light: #F8FAFB;
@@ -41,7 +43,29 @@ html {
 body {
     background-color: var(--black-primary);
 }
+::-webkit-scrollbar {
+    width: 8px;
+}
 
+::-webkit-scrollbar-thumb {
+    background-color: var(--black-secondary);
+    border-radius: 6px;
+}
+
+/* Style for Firefox */
+* {
+    scrollbar-color: var(--black-secondary) transparent;
+}
+
+/* Style for Edge and Internet Explorer */
+* {
+    -ms-overflow-style: none;
+}
+
+*::-ms-scrollbar-thumb {
+    background-color: var(--black-secondary);
+    border-radius: 6px;
+}
 .container {
     max-width: 90rem;
     margin-left: auto;
@@ -112,11 +136,14 @@ nav .nav-links ul a {
     font-style: normal;
     font-weight: 400;
     padding: 0.65rem 1.25rem;
-    ;
     border-radius: 1.875rem;
-    ;
     display: block;
     height: 2.625rem;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+nav .nav-links ul a:hover{
+    background-color: var(--white);
 }
 
 .hero {
@@ -172,8 +199,14 @@ nav .nav-links ul a {
     font-weight: 400;
     line-height: normal;
     margin-top: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
+.hero-section .text-holder button:hover{
+    background: var(--white-light);
+    color: var(--black-secondary);
+}
 .hero-section .graphics-holder1 {
     width: 31.625rem;
     height: 31.625rem;
@@ -367,7 +400,7 @@ nav .nav-links ul a {
     width: 3.375rem;
     height: 3.375rem;
     border-radius: 1.875rem;
-    background: #1D2024;
+    background: var(--black-secondary);
     backdrop-filter: blur(2px);
     display: flex;
     align-items: center;
@@ -401,7 +434,7 @@ nav .nav-links ul a {
 }
 
 .projects .projects-holder .project-card .expanded p {
-    color: #FFF;
+    color: var(--white);
     font-family: 'Gilroy-Medium';
     font-size: 1.25rem;
     font-style: normal;
@@ -459,7 +492,7 @@ nav .nav-links ul a {
 }
 
 .services .services-holder .section-heading-details p {
-    color: #FFF;
+    color: var(--white);
     font-family: 'Gilroy-Medium';
     width: 98%;
     font-size: 1.5rem;
@@ -490,7 +523,7 @@ nav .nav-links ul a {
 }
 
 .banner-holder .hero-text-holder h2 {
-    color: #FFF;
+    color: var(--white);
     font-family: 'Gilroy-Medium';
     font-size: 6rem;
     font-style: normal;
@@ -500,7 +533,7 @@ nav .nav-links ul a {
 }
 
 .banner-holder .hero-text-holder h3 {
-    color: #AFA6F2;
+    color: var(--purple-light);
     font-family: 'Homemade-Apple';
     font-size: 4rem;
     font-style: normal;
@@ -529,7 +562,7 @@ nav .nav-links ul a {
 
 .testimonials-holder {
     padding-top: 6.25rem;
-    padding-bottom: 6.25rem;
+    padding-bottom: 3.25rem;
     height: 100%;
 }
 
@@ -562,7 +595,7 @@ nav .nav-links ul a {
 }
 
 .testimonials-holder .section-heading-description span {
-    color: #AFA6F2;
+    color: var(--purple-light);
     font-family: 'Homemade-Apple';
     font-size: 3rem;
     font-style: normal;
@@ -599,7 +632,7 @@ nav .nav-links ul a {
 }
 
 .testimonials-holder .testimonials-cards-holder .cards .name {
-    color: #FFF;
+    color: var(--white);
     font-size: 2rem;
     font-style: normal;
     font-weight: 400;
@@ -608,7 +641,7 @@ nav .nav-links ul a {
 }
 
 .testimonials-holder .testimonials-cards-holder .cards .designation {
-    color: #AFA6F2;
+    color: var(--purple-light);
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
@@ -616,7 +649,7 @@ nav .nav-links ul a {
 }
 
 .testimonials-holder .testimonials-cards-holder .cards .review {
-    color: #FFF;
+    color: var(--white);
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
@@ -634,18 +667,26 @@ nav .nav-links ul a {
     width: 11.875rem;
     height: 3.375rem;
     border-radius: 1.875rem;
-    background: #AFA6F2;
+    background: var(--purple-light);
     color: #000;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.testimonials-holder .btn-holder button:hover{
+    background-color: rgb(138, 125, 234);
+    color: var(--white-light);
 }
 
 
 .clients {}
 
-.clients-holder {}
+.clients-holder {
+    padding-top: 3rem;
+}
 
 .clients-holder .section-heading h3 {
     color: var(--white);
@@ -676,7 +717,7 @@ nav .nav-links ul a {
 }
 
 .clients-holder .section-heading-description span {
-    color: #AFA6F2;
+    color: var(--purple-light);
     font-family: 'Homemade-Apple';
     font-size: 3rem;
     font-style: normal;
@@ -706,7 +747,7 @@ nav .nav-links ul a {
 
 .offerings-holder h1 {
     text-align: center;
-    color: #FFF;
+    color: var(--white);
     font-size: 6rem;
     font-style: normal;
     font-weight: 400;
@@ -741,7 +782,7 @@ nav .nav-links ul a {
 }
 
 .contact-holder .text-holder-main h2 {
-    color: #000;
+    color: var(--black);
     font-family: 'Gilroy-ExtraBold';
     font-size: 4rem;
     font-style: normal;
@@ -767,7 +808,7 @@ nav .nav-links ul a {
 }
 
 .contact-holder .details-holder .block .address {
-    color: #000;
+    color: var(--black);
     font-family: 'Gilroy-Medium';
     font-size: 1.5rem;
     font-style: normal;
@@ -778,7 +819,7 @@ nav .nav-links ul a {
 }
 
 .contact-holder .details-holder .block .phone {
-    color: #000;
+    color: var(--black);
     font-family: 'Gilroy-Medium';
     font-size: 1.5rem;
     font-style: normal;
@@ -789,7 +830,7 @@ nav .nav-links ul a {
 }
 
 .contact-holder .details-holder .block .email {
-    color: #000;
+    color: var(--black);
     font-family: 'Gilroy-Medium';
     font-size: 1.5rem;
     font-style: normal;
@@ -835,7 +876,7 @@ footer .nav-links ul {
 }
 
 footer .nav-links ul li a {
-    color: #FFF;
+    color: var(--white);
     font-family: 'Gilroy-Medium';
     font-size: 1.25rem;
     font-style: normal;
@@ -863,6 +904,7 @@ footer .social-holder .social-ico-holder {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 footer .social-holder .social-ico-holder svg {
@@ -870,7 +912,7 @@ footer .social-holder .social-ico-holder svg {
     object-fit: contain;
 }
 footer .credits p:nth-child(1){
-    color: #FFF;
+    color: var(--white);
     text-align: center;
     font-size: 0.9375rem;
     font-style: normal;
@@ -880,7 +922,7 @@ footer .credits p:nth-child(1){
     margin-top: 1.2rem;
 }
 footer .credits p:nth-child(2){
-    color: #FFF;
+    color: var(--white);
     text-align: center;
     font-size: 0.75rem;
     font-style: normal;
