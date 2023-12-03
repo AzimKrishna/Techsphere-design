@@ -1566,9 +1566,10 @@ footer .credits p:nth-child(2) {
     }
 
     nav .nav-links .selected {
-        background-color: var(--white);
-    }
+        background-color: #AFA6F2;
+        color: var(--white);
 
+    }
     nav .nav-links ul {
         margin-top: 30vh;
         display: flex;
